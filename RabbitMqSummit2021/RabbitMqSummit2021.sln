@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.MessageC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.CloudFanout", "RabbitMqSummit2021.CloudFanout\RabbitMqSummit2021.CloudFanout.csproj", "{8AA40DAD-2854-4661-AB99-6CD62999CDF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqSummit2021.Common", "RabbitMqSummit2021.Common\RabbitMqSummit2021.Common.csproj", "{7058AF9F-258C-4315-90EE-AC2C24E586EE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,10 +35,6 @@ Global
 		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

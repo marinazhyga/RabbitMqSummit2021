@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MassTransit;
+using Microsoft.Extensions.Configuration;
 using RabbitMqSummit2021.MessageContracts;
 
 namespace RabbitMqSummit2021.CloudFanout
@@ -10,12 +11,21 @@ namespace RabbitMqSummit2021.CloudFanout
     {
         public static async Task Main(string[] args)
         {
+            var builder = new ConfigurationBuilder()
+              .AddJsonFile($"appsettings.json", true, true);
+
+            var config = builder.Build();
+           
+            var username = config["RabbitMq:Username"];
+            var password = config["RabbitMq:Password"];
+            var url = config["RabbitMq:Url"];        
+           
             var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                cfg.Host(new Uri("rabbitmq://localhost/"), hst =>
+                cfg.Host(new Uri($"{url}"), hst =>
                 {
-                    hst.Username("guest");
-                    hst.Password("guest");
+                    hst.Username(username);
+                    hst.Password(password);
                 });                
             });
 
