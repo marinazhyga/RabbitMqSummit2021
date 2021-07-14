@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.EdgeFanout", "RabbitMqSummit2021.EdgeFanout\RabbitMqSummit2021.EdgeFanout.csproj", "{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FanoutApproach", "FanoutApproach", "{F4324F16-F169-4DF5-9285-D11C3DB2BD80}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fanout", "Fanout", "{F4324F16-F169-4DF5-9285-D11C3DB2BD80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.Consumers", "RabbitMqSummit2021.Consumers\RabbitMqSummit2021.Consumers.csproj", "{8EF944EA-9181-4D36-99B5-D4B9E6EB9735}"
 EndProject
@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.MessageC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.CloudFanout", "RabbitMqSummit2021.CloudFanout\RabbitMqSummit2021.CloudFanout.csproj", "{8AA40DAD-2854-4661-AB99-6CD62999CDF4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DirectApproach", "DirectApproach", "{62321078-10CA-4047-AEF0-8B76F1E08D11}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Direct", "Direct", "{62321078-10CA-4047-AEF0-8B76F1E08D11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqSummit2021.CloudDirect", "RabbitMqSummit2021.CloudDirect\RabbitMqSummit2021.CloudDirect.csproj", "{4BEED0E9-B85C-4E0C-A449-9BB71F4EC8A3}"
 EndProject
