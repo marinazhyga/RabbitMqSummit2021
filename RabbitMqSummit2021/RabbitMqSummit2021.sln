@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.EdgeFanout", "RabbitMqSummit2021.EdgeFanout\RabbitMqSummit2021.EdgeFanout.csproj", "{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FanoutApproach", "FanoutApproach", "{F4324F16-F169-4DF5-9285-D11C3DB2BD80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.Consumers", "RabbitMqSummit2021.Consumers\RabbitMqSummit2021.Consumers.csproj", "{8EF944EA-9181-4D36-99B5-D4B9E6EB9735}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.MessageContracts", "RabbitMqSummit2021.MessageContracts\RabbitMqSummit2021.MessageContracts.csproj", "{BC190601-A2CD-403C-87B4-619F6319FD1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqSummit2021.CloudFanout", "RabbitMqSummit2021.CloudFanout\RabbitMqSummit2021.CloudFanout.csproj", "{8AA40DAD-2854-4661-AB99-6CD62999CDF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqSummit2021.Common", "RabbitMqSummit2021.Common\RabbitMqSummit2021.Common.csproj", "{7058AF9F-258C-4315-90EE-AC2C24E586EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF944EA-9181-4D36-99B5-D4B9E6EB9735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF944EA-9181-4D36-99B5-D4B9E6EB9735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF944EA-9181-4D36-99B5-D4B9E6EB9735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF944EA-9181-4D36-99B5-D4B9E6EB9735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC190601-A2CD-403C-87B4-619F6319FD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC190601-A2CD-403C-87B4-619F6319FD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC190601-A2CD-403C-87B4-619F6319FD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC190601-A2CD-403C-87B4-619F6319FD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AA40DAD-2854-4661-AB99-6CD62999CDF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7058AF9F-258C-4315-90EE-AC2C24E586EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE0FE5D2-2390-4B76-9CA2-F2C7C38FBDDC} = {F4324F16-F169-4DF5-9285-D11C3DB2BD80}
+		{8AA40DAD-2854-4661-AB99-6CD62999CDF4} = {F4324F16-F169-4DF5-9285-D11C3DB2BD80}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ADC22255-9D44-4F5C-A2FF-C15F0F729D39}
+	EndGlobalSection
+EndGlobal

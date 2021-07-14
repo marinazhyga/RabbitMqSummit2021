@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RabbitMqSummit2021.EdgeConsumer": {
+      "commandName": "Project",
+      "commandLineArgs": "1"
+    }
+  }
+}
