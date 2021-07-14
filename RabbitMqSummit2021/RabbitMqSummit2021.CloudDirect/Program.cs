@@ -39,7 +39,6 @@ namespace RabbitMqSummit2021.CloudDirect
                     x.UseRoutingKeyFormatter(context => context.Message.Value);
                 });
                 cfg.Publish<IFinalizeTransaction>(x => x.ExchangeType = ExchangeType.Direct);
-
             });
 
             var source = new CancellationTokenSource(TimeSpan.FromSeconds(10));
@@ -50,19 +49,16 @@ namespace RabbitMqSummit2021.CloudDirect
             {
                 while (true)
                 {
-                    string value = await Task.Run(() =>
+                    string edgeId = await Task.Run(() =>
                     {
                         Console.WriteLine("Press enter or type quit to exit");
                         Console.Write("> ");
                         return Console.ReadLine();
                     });
 
-                    if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
+                    if ("quit".Equals(edgeId, StringComparison.OrdinalIgnoreCase))
                         break;
-
-                    var random = new Random();
-                    var edgeId = random.Next(1, 3);
-
+                    
                     Console.WriteLine($"Send messages to Edge {edgeId}");
 
                     var endpoint = $"edge{edgeId}-outbound";

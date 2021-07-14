@@ -31,18 +31,15 @@ namespace RabbitMqSummit2021.CloudFanout
             {
                 while (true)
                 {
-                    string value = await Task.Run(() =>
+                    string edgeId = await Task.Run(() =>
                     {
                         Console.WriteLine("Press enter or type quit to exit");
                         Console.Write("> ");
                         return Console.ReadLine();
                     });
 
-                    if ("quit".Equals(value, StringComparison.OrdinalIgnoreCase))
-                        break;
-
-                    var random = new Random();
-                    var edgeId = random.Next(1, 3);
+                    if ("quit".Equals(edgeId, StringComparison.OrdinalIgnoreCase))
+                        break;                    
 
                     Console.WriteLine($"Send messages to Edge {edgeId}");
 
