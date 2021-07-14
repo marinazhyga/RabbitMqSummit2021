@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RabbitMqSummit2021.Common\RabbitMqSummit2021.Common.csproj" />
     <ProjectReference Include="..\RabbitMqSummit2021.MessageContracts\RabbitMqSummit2021.MessageContracts.csproj" />
   </ItemGroup>
 

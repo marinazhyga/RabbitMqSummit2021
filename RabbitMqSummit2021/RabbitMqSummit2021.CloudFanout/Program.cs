@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
+using RabbitMqSummit2021.Common;
 using RabbitMqSummit2021.MessageContracts;
 
 namespace RabbitMqSummit2021.CloudFanout
@@ -11,21 +12,14 @@ namespace RabbitMqSummit2021.CloudFanout
     {
         public static async Task Main(string[] args)
         {
-            var builder = new ConfigurationBuilder()
-              .AddJsonFile($"appsettings.json", true, true);
+            var rmqSettings = SettingsExtension.Load();
 
-            var config = builder.Build();
-           
-            var username = config["RabbitMq:Username"];
-            var password = config["RabbitMq:Password"];
-            var url = config["RabbitMq:Url"];        
-           
             var busControl = Bus.Factory.CreateUsingRabbitMq(cfg =>
             {
-                cfg.Host(new Uri($"{url}"), hst =>
+                cfg.Host(new Uri($"{rmqSettings.Url}"), hst =>
                 {
-                    hst.Username(username);
-                    hst.Password(password);
+                    hst.Username(rmqSettings.Username);
+                    hst.Password(rmqSettings.Password);
                 });                
             });
 
@@ -52,16 +46,15 @@ namespace RabbitMqSummit2021.CloudFanout
 
                     Console.WriteLine($"Send messages to Edge {edgeId}");
 
-                    //var sendToUri = new Uri($"{RabbitMqConsts.RabbitMqUri}{RabbitMqConsts.RegisterDemandServiceQueue}");
-                    var sendToUri = new Uri($"rabbitmq://localhost/edge{edgeId}-add-transaction");
+                    var sendToUri = new Uri($"{rmqSettings.Url}/edge{edgeId}-add-transaction");
                     var endPoint = await busControl.GetSendEndpoint(sendToUri);
                     await endPoint.Send<IAddTransaction>(new { Value = "IAddTransaction" });
 
-                    sendToUri = new Uri($"rabbitmq://localhost/edge{edgeId}-remove-transaction");
+                    sendToUri = new Uri($"{rmqSettings.Url}/edge{edgeId}-remove-transaction");
                     endPoint = await busControl.GetSendEndpoint(sendToUri);
                     await endPoint.Send<IRemoveTransaction>(new { Value = "IRemoveTransaction" });
 
-                    sendToUri = new Uri($"rabbitmq://localhost/edge{edgeId}-finalize-transaction");
+                    sendToUri = new Uri($"{rmqSettings.Url}/edge{edgeId}-finalize-transaction");
                     endPoint = await busControl.GetSendEndpoint(sendToUri);
                     await endPoint.Send<IFinalizeTransaction>(new { Value = "IFinalizeTransaction" });
                 }
