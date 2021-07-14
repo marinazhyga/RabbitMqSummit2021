@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RabbitMqSummit2021.EdgeDirect": {
+      "commandName": "Project",
+      "commandLineArgs": "1"
+    }
+  }
+}

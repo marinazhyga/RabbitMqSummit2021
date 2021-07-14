@@ -49,7 +49,7 @@ namespace RabbitMqSummit2021.EdgeFanout
             });
 
             await busControl.StartAsync();
-            Console.WriteLine($"Edge {edgeId} started... Press enter to exit");
+            Console.WriteLine($"Edge fanout {edgeId} started... Press enter to exit");
             Console.ReadLine();
             await busControl.StopAsync();            
         }
