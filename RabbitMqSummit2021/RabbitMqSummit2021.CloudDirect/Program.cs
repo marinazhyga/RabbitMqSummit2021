@@ -51,7 +51,7 @@ namespace RabbitMqSummit2021.CloudDirect
                 {
                     string edgeId = await Task.Run(() =>
                     {
-                        Console.WriteLine("Press enter or type quit to exit");
+                        Console.WriteLine("Press enter edge identifier or type quit to exit");
                         Console.Write("> ");
                         return Console.ReadLine();
                     });
@@ -59,7 +59,7 @@ namespace RabbitMqSummit2021.CloudDirect
                     if ("quit".Equals(edgeId, StringComparison.OrdinalIgnoreCase))
                         break;
                     
-                    Console.WriteLine($"Send messages to Edge {edgeId}");
+                    Console.WriteLine($"Send messages to edge{edgeId}");
 
                     var endpoint = $"edge{edgeId}-outbound";
 

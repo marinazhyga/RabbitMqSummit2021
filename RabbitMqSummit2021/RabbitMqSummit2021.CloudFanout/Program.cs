@@ -33,7 +33,7 @@ namespace RabbitMqSummit2021.CloudFanout
                 {
                     string edgeId = await Task.Run(() =>
                     {
-                        Console.WriteLine("Press enter or type quit to exit");
+                        Console.WriteLine("Press enter edge identifier or type quit to exit");
                         Console.Write("> ");
                         return Console.ReadLine();
                     });
@@ -41,7 +41,7 @@ namespace RabbitMqSummit2021.CloudFanout
                     if ("quit".Equals(edgeId, StringComparison.OrdinalIgnoreCase))
                         break;                    
 
-                    Console.WriteLine($"Send messages to Edge {edgeId}");
+                    Console.WriteLine($"Send messages to edge{edgeId}");
 
                     var sendToUri = new Uri($"{rmqSettings.Url}/edge{edgeId}-add-transaction");
                     var endPoint = await busControl.GetSendEndpoint(sendToUri);
