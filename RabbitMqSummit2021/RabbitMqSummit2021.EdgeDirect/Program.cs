@@ -37,8 +37,6 @@ namespace RabbitMqSummit2021.EdgeDirect
 
                 cfg.ReceiveEndpoint($"edge{edgeId}-add-transaction", x =>
                 {
-                    //x.ConfigureConsumeTopology = false;
-
                     x.Consumer<AddTransactionConsumer>();
 
                     x.Bind(endpoint, s =>
@@ -50,8 +48,6 @@ namespace RabbitMqSummit2021.EdgeDirect
 
                 cfg.ReceiveEndpoint($"edge{edgeId}-remove-transaction", x =>
                 {
-                    //x.ConfigureConsumeTopology = false;
-
                     x.Consumer<RemoveTransactionConsumer>();
 
                     x.Bind(endpoint, s =>
@@ -63,8 +59,6 @@ namespace RabbitMqSummit2021.EdgeDirect
 
                 cfg.ReceiveEndpoint($"edge{edgeId}-finalize-transaction", x =>
                 {
-                    //x.ConfigureConsumeTopology = false;
-
                     x.Consumer<FinalizeTransactionConsumer>();
 
                     x.Bind(endpoint, s =>
