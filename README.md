@@ -13,11 +13,11 @@ Steps how to run the demo solution:
   * Give permission to this vhost.
   * Enable federation and federation_management plugins.
   * Create federation upstream to cloud from 1.
-  * Create policy with pattern ^(edge(uniqueId))$ to federate echanges only. Examples of policies for different edges ^(edge1)$, ^(edge2)$, ^(edgeN)$   
+  * Create policy with pattern ^(edge(uniqueId))$ to federate exchanges only. Examples of policies for different edges ^(edge1)$, ^(edge2)$, ^(edgeN)$   
 4. Run RabbitMqSummit2021.EdgeFanout with a proper appsettings.json pointing to the edge RabbitMq instance.
 5. Exchanges and queues will be created on the edge RabbitMq as well as the cloud RabbitMq. 
 6. Run RabbitMqSummit2021.CloudFanout with a proper appsettings.json pointing to the cloud RabbitMq instance.
-7. Input the id of the edge to what message should be delivered. Identifier should respond to the already configured edge RabbitMq. 
+7. Input the id of the edge to what message should be delivered. Identifier should be equal to the already configured edge RabbitMq. 
 ## Second approach represents a producer that publishes to a direct exchange, where a routing key is a unique edge identifier.
 ![](images/direct_shovel.png)
 Steps how to run the demo solution:
